@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>The 2025 AI-Ready Governance Report</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white font-sans">
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- Main Section -->
+  <div class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- space -->
+    <div class="h-6"></div>
+
+    <!-- Heading -->
+    <h1 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-8 text-center">
+      The 2025 AI-Ready Governance Report
+    </h1>
+
+    <!-- Image + Text Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 items-start">
+
+      <!-- Image + Button -->
+      <div class="md:col-span-1 text-center">
+        <img src="assets/images/image27a.png" alt="Guide Banner" class="w-40 h-auto mx-auto mb-4 ">
+        <button id="guideBtnTop" class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 font-semibold shadow">
+          DOWNLOAD PDF
+        </button>
+      </div>
+
+      <!-- Text Content beside image -->
+      <div class="md:col-span-3 text-gray-800 space-y-4">
+        <p>Governance teams are embracing a new mindset.</p>
+        <p>
+          Legacy governance can’t keep up with AI. Manual, siloed processes break
+          under the speed and scale of AI. How are governance teams adapting?
+        </p>
+        <p>
+          OneTrust surveyed 1,250 governance-focused IT decision-makers, where
+          leaders validated that AI is exposing cracks in traditional oversight systems.
+        </p>
+        <p class="font-semibold">
+          Key findings:
+        </p>
+        <ul class="list-disc pl-6 space-y-1">
+          <li> 70% admit their ability to govern AI is often at odds with the speed of AI
+            initiatives</li>
+          <li> 73% say AI has revealed gaps in visibility, collaboration, and policy
+            enforcement</li>
+          <li>82% say AI risks have accelerated the need to modernize and improve 
+governance</li>
+
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Text + Button -->
+    <div class="mt-8 space-y-4 text-gray-800">
+      <div class="text-center mt-6">
+        <button id="guideBtnBottom" class="text-red-600  hover:text-red-700 font-semibold ">
+          DOWNLOAD PDF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer" class="mt-12"></div>
+
+  <!-- JS -->
+  <script>
+    // Load Navbar & Footer
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar').innerHTML = data);
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+
+    // Open guide
+    function openGuide() {
+      window.open('download.html', '_blank');
+    }
+
+    document.getElementById('guideBtnTop').addEventListener('click', openGuide);
+    document.getElementById('guideBtnBottom').addEventListener('click', openGuide);
+  </script>
+
+</body>
+
+</html>
